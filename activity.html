@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* Attribute Selector */
+        input[type=text]{
+            border: 2px solid maroon;
+            color: mediumblue;
+            font-size: large;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+        input[type=password]{
+            border: 2px solid rgb(113, 11, 255);
+            color: orangered;
+            font-size: large;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+        /* Child selectr */
+        ul>li{
+            color: palevioletred;
+        }
+        /* sibling selector */
+h3+p{
+    color: pink;
+    font-weight: 800;
+    font-size: xx-large;
+}
+/* Pseudo classes */
+a:hover{
+    color:deeppink;
+}
+li:hover{
+    color:crimson;
+}
+li:nth-child(2){
+    border: 2px dashed navajowhite;
+}
+div:not(.div2){
+    color:darkturquoise;
+    border: 2px mediumpurple dashed;
+}
+/* Pseudo elements */
+a:link{
+    color:darksalmon;
+}
+a:hover{
+    color: palegreen;
+}
+a:visited{
+    color: firebrick;
+}
+a::after{
+    content: "🚀"
+}
+
+li::before{
+    content: "☕";
+}
+li::marker{
+    color:rgb(113, 11, 255)
+}
+li:nth-child(2)::after{
+    content: "🧋";
+}
+p::first-letter{
+    font-size: 30px;
+    color: rgb(252, 141, 129);
+}
+    </style>
+</head>
+<body>
+    <h3>Advanced Selectors</h3>
+    <input for="text" type="text" placeholder="search...">
+    <br><br>
+    <input for="password" type="password" placeholder="password">
+    <ul>
+        <li type="circle">Tea</li>
+        <li type="square">Coffee</li>
+        <li>Milk</li>
+    </ul>
+    <h3>Codingal</h3>
+    <p>I am a penguin.</p>
+    <p>Let's make kids fall in love with coding.</p>
+    <a href="https://www.bing.com/">Click here</a>
+    <br><br>
+    <div class="div1">This is div1</div>
+    <div class="div2">This is div2</div>
+    <div class="div3">This is div3</div>
+</body>
+</html>
